@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 import styled, { createGlobalStyle } from 'styled-components'
 // createGlobalStyle to np. usuniecia paddingu z calosci
+import {colors} from '../utils/colors'
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -26,7 +27,7 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: pink;
+  background: ${colors.dark};
   position: relative;
 `
 
@@ -45,7 +46,7 @@ font-size: 2em;
 font-weight: 700;
 `
 const Button = styled.button`
-  width: 200px;
+  width: ${({width})=>width};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,8 +54,8 @@ const Button = styled.button`
   height: 40px;
   border-radius: 50px;
   border: none;
-  color: pink;
-  background: white;
+  color: ${colors.white};
+  background: ${colors.primary};
   font-size: 1em;
   font-weight: 800;
   transition: box-shadow .3s ease;
@@ -77,7 +78,9 @@ const IndexPage = () => (
       {/* <BlueH1 isBig>Hi people</BlueH1> */}
       {/* <StyledLink to="404">About Page</StyledLink> */}
       {/* <Button as='a' href='/404'>About Page</Button> */}
-      <Button className='coral' as={Link} to='/about'>About Page</Button>
+      {/* <Button className='coral' as={Link} to='/about'>About Page</Button> */}
+      <Button width='500px' as={Link} to='/about'>About Page</Button>
+    
     </StyledWrapper>
   </>
 )
