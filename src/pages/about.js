@@ -1,13 +1,14 @@
 import React from 'react';
-// import Button from '../components/Button/Button';
-// import Layout from '../layout/Layout'
-// import { Link } from 'gatsby'
+import Button from '../components/Button/Button';
+import Layout from '../layout/Layout'
+import H1 from '../components/H1/H1';
+import { Link } from 'gatsby'
 
 const AboutPage = () => (
-  <div>
-    <h1>Hello people, this is about page</h1>
-    {/* <Button as={Link} to="/">Go back</Button> */}
-  </div>
+    <Layout>
+    <H1 isBig={true}>Hello people, this is about page</H1>
+    <Button as={Link} to="/">Go back</Button>
+  </Layout>
 );
 
 export default AboutPage;
